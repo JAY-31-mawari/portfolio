@@ -30,8 +30,22 @@ const Header = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const handleNavigate = () => {
-    navigate("/");
+    if (location.pathname === "/") {
+      handleScrollToTop();
+    } else {
+      navigate("/");
+    }
+  };
+
+  const handleLinkClick = (path: string) => {
+    if (location.pathname === path) {
+      handleScrollToTop();
+    }
   };
 
   return (
@@ -92,6 +106,7 @@ const Header = () => {
               <Link
                 key={link.to}
                 to={link.to}
+                onClick={() => handleLinkClick(link.to)}
                 className={`relative px-4 py-1.5 rounded-full transition-colors duration-300 ${isActive(link.to)
                   ? "text-blue-600 dark:text-blue-400"
                   : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
@@ -172,6 +187,10 @@ const Header = () => {
                   <Link
                     key={link.to}
                     to={link.to}
+                    onClick={() => {
+                      handleLinkClick(link.to);
+                      setSidebarOpen(false);
+                    }}
                     className={`relative px-4 py-2.5 rounded-xl transition-all ${isActive(link.to)
                       ? "text-blue-600 dark:text-blue-400 bg-slate-900/[0.04] dark:bg-white/[0.06]"
                       : "text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/50 dark:hover:bg-slate-800/50"
