@@ -25,6 +25,7 @@ const Header = () => {
     { label: "Experience", to: "/experience" },
     { label: "About", to: "/about" },
     { label: "Skills", to: "/skills" },
+    { label: "Resume", to: "/resume" },
   ];
 
   const isActive = (path: string) => location.pathname === path;

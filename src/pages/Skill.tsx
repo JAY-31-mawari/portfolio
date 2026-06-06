@@ -10,11 +10,10 @@ import {
   SiNextdotjs,
   SiMysql,
   SiMongodb,
-  SiRedis
+  SiRedis,
 } from "react-icons/si";
 
 const Skills = () => {
-
   const skills = [
     {
       icon: <Code size={26} />,
@@ -24,90 +23,111 @@ const Skills = () => {
     {
       icon: <Layers size={26} />,
       title: "Frameworks & Libraries",
-      desc: "React.js, Next.js, Node.js, Express.js, React Native",
+      desc: "React.js, Next.js, Node.js, Express.js, React Native, Expo",
     },
     {
       icon: <Database size={26} />,
       title: "Database",
-      desc: "Sql, MongoDB, Redis",
+      desc: "PostgreSQL, MongoDB, Redis",
     },
     {
       icon: <Server size={26} />,
-      title: "Other",
-      desc: "AWS, Firebase",
+      title: "Cloud and AI",
+      desc: "AWS (EC2, S3, SQS) , GIT, RAG-chatbot, Firebase",
     },
   ];
-
 
   const skillIcons = [
     {
       name: "React",
-      icon: <SiReact className="text-[#61DAFB] transition-colors duration-300" />,
-      glow: "hover:shadow-[0_0_20px_rgba(97,218,251,0.15)] hover:border-[#61DAFB]/30"
+      icon: (
+        <SiReact className="text-[#61DAFB] transition-colors duration-300" />
+      ),
+      glow: "hover:shadow-[0_0_20px_rgba(97,218,251,0.15)] hover:border-[#61DAFB]/30",
     },
     {
       name: "Next.js",
-      icon: <SiNextdotjs className="text-slate-900 dark:text-white transition-colors duration-300" />,
-      glow: "hover:shadow-[0_0_20px_rgba(15,23,42,0.15)] dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:border-slate-400 dark:hover:border-slate-700"
+      icon: (
+        <SiNextdotjs className="text-slate-900 dark:text-white transition-colors duration-300" />
+      ),
+      glow: "hover:shadow-[0_0_20px_rgba(15,23,42,0.15)] dark:hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:border-slate-400 dark:hover:border-slate-700",
     },
     {
       name: "React Native",
-      icon: <SiReact className="text-[#61DAFB] transition-colors duration-300 animate-[pulse_2s_infinite]" />,
-      glow: "hover:shadow-[0_0_20px_rgba(97,218,251,0.15)] hover:border-[#61DAFB]/30"
+      icon: (
+        <SiReact className="text-[#61DAFB] transition-colors duration-300 animate-[pulse_2s_infinite]" />
+      ),
+      glow: "hover:shadow-[0_0_20px_rgba(97,218,251,0.15)] hover:border-[#61DAFB]/30",
     },
     {
       name: "Python",
-      icon: <SiPython className="text-[#3776AB] transition-colors duration-300" />,
-      glow: "hover:shadow-[0_0_20px_rgba(55,118,171,0.15)] hover:border-[#3776AB]/30"
+      icon: (
+        <SiPython className="text-[#3776AB] transition-colors duration-300" />
+      ),
+      glow: "hover:shadow-[0_0_20px_rgba(55,118,171,0.15)] hover:border-[#3776AB]/30",
     },
     {
       name: "TypeScript",
-      icon: <SiTypescript className="text-[#3178C6] transition-colors duration-300" />,
-      glow: "hover:shadow-[0_0_20px_rgba(49,120,198,0.15)] hover:border-[#3178C6]/30"
+      icon: (
+        <SiTypescript className="text-[#3178C6] transition-colors duration-300" />
+      ),
+      glow: "hover:shadow-[0_0_20px_rgba(49,120,198,0.15)] hover:border-[#3178C6]/30",
     },
     {
       name: "JavaScript",
-      icon: <SiJavascript className="text-[#F7DF1E] transition-colors duration-300" />,
-      glow: "hover:shadow-[0_0_20px_rgba(247,223,30,0.15)] hover:border-[#F7DF1E]/30"
+      icon: (
+        <SiJavascript className="text-[#F7DF1E] transition-colors duration-300" />
+      ),
+      glow: "hover:shadow-[0_0_20px_rgba(247,223,30,0.15)] hover:border-[#F7DF1E]/30",
     },
     {
       name: "MongoDB",
-      icon: <SiMongodb className="text-[#47A248] transition-colors duration-300" />,
-      glow: "hover:shadow-[0_0_20px_rgba(71,162,72,0.15)] hover:border-[#47A248]/30"
+      icon: (
+        <SiMongodb className="text-[#47A248] transition-colors duration-300" />
+      ),
+      glow: "hover:shadow-[0_0_20px_rgba(71,162,72,0.15)] hover:border-[#47A248]/30",
     },
     {
       name: "SQL",
-      icon: <SiMysql className="text-[#4479A1] transition-colors duration-300" />,
-      glow: "hover:shadow-[0_0_20px_rgba(68,121,161,0.15)] hover:border-[#4479A1]/30"
+      icon: (
+        <SiMysql className="text-[#4479A1] transition-colors duration-300" />
+      ),
+      glow: "hover:shadow-[0_0_20px_rgba(68,121,161,0.15)] hover:border-[#4479A1]/30",
     },
     {
       name: "Redis",
-      icon: <SiRedis className="text-[#DC382D] transition-colors duration-300" />,
-      glow: "hover:shadow-[0_0_20px_rgba(220,56,45,0.15)] hover:border-[#DC382D]/30"
+      icon: (
+        <SiRedis className="text-[#DC382D] transition-colors duration-300" />
+      ),
+      glow: "hover:shadow-[0_0_20px_rgba(220,56,45,0.15)] hover:border-[#DC382D]/30",
     },
     {
       name: "Firebase",
-      icon: <SiFirebase className="text-[#FFCA28] transition-colors duration-300" />,
-      glow: "hover:shadow-[0_0_20px_rgba(255,202,40,0.15)] hover:border-[#FFCA28]/30"
+      icon: (
+        <SiFirebase className="text-[#FFCA28] transition-colors duration-300" />
+      ),
+      glow: "hover:shadow-[0_0_20px_rgba(255,202,40,0.15)] hover:border-[#FFCA28]/30",
     },
     {
       name: "AWS",
-      icon: <SiAmazonwebservices className="text-[#FF9900] transition-colors duration-300" />,
-      glow: "hover:shadow-[0_0_20px_rgba(255,153,0,0.15)] hover:border-[#FF9900]/30"
-    }
+      icon: (
+        <SiAmazonwebservices className="text-[#FF9900] transition-colors duration-300" />
+      ),
+      glow: "hover:shadow-[0_0_20px_rgba(255,153,0,0.15)] hover:border-[#FF9900]/30",
+    },
   ];
 
   return (
-    <main
-      className="relative min-h-screen pt-32 pb-20 px-6 overflow-hidden bg-grid-pattern transition-colors duration-500 bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text"
-    >
+    <main className="relative min-h-screen pt-32 pb-20 px-6 overflow-hidden bg-grid-pattern transition-colors duration-500 bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text">
       {/* Decorative Radial Grid */}
       <div className="absolute inset-0 bg-radial-gradient pointer-events-none -z-10" />
 
       <div className="max-w-5xl mx-auto relative z-10">
         <section className="max-w-5xl mx-auto mb-24 relative z-10">
           <div className="flex flex-col items-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight mb-2">My Tech Stack</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-2">
+              My Tech Stack
+            </h2>
             <div className="h-1 w-12 rounded bg-blue-600" />
           </div>
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
@@ -118,8 +138,12 @@ const Skills = () => {
                 whileTap={{ scale: 0.98 }}
                 className={`group flex items-center gap-3 px-5 py-3 rounded-2xl glass-panel glass-panel-hover cursor-default border border-slate-200/50 dark:border-white/[0.04] transition-all duration-300 ${skill.glow}`}
               >
-                <span className="text-2xl transition-transform duration-300 group-hover:scale-110">{skill.icon}</span>
-                <span className="font-semibold text-sm text-slate-700 dark:text-slate-200">{skill.name}</span>
+                <span className="text-2xl transition-transform duration-300 group-hover:scale-110">
+                  {skill.icon}
+                </span>
+                <span className="font-semibold text-sm text-slate-700 dark:text-slate-200">
+                  {skill.name}
+                </span>
               </motion.div>
             ))}
           </div>
@@ -158,7 +182,6 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
-
       </div>
     </main>
   );

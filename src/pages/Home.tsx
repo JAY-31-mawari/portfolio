@@ -1,6 +1,7 @@
 import React from "react";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   const github = import.meta.env.VITE_APP_GITHUB;
@@ -10,16 +11,21 @@ const Home: React.FC = () => {
 
   const projects = [
     {
+      title: "AI Voice Assistant Chatbot",
+      desc: "An interactive AI voice assistant that converts user speech into text, extracts intents (such as mobile recharge or bill payments), prompts the user for required input fields, and executes backend functions to fulfill services before returning a text response.",
+      tech: [
+        "python",
+        "WebSockets",
+        "Speech-to-Text(TTS)",
+        "Named Entity Recognition",
+      ],
+      link: "",
+    },
+    {
       title: "E-Finder",
       desc: "E-Finder is designed to locate the nearest electric charging station for EV cars, offering precise traffic condition forecasts. The application seamlessly integrates Map API for mapping services, and the data is dispatched into the API after cleaning the data. Stores the data in a Nosql mongoDB database, ensuring scalability",
       tech: ["HTML", "JavaScript", "Node.js", "Map API"],
       link: "https://efinder-group32.netlify.app/",
-    },
-    {
-      title: "Travel",
-      desc: "A dynamic travel website built in React.js ensures smooth and efficient functionality, plus with improved state management. It stores user data and travel-related information in an SQL database, ensuring faster responses. The implementation includes a REST API facilitating communication between the frontend and the database, enabling seamless storage and retrieval of data",
-      tech: ["React.js", "Express.js", "mysql", "REST API"],
-      link: "",
     },
     {
       title: "REST API for E-Commerce App",

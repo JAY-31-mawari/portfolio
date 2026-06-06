@@ -4,6 +4,7 @@ import About from "../pages/About";
 import Skills from "../pages/Skill";
 import Experience from "../pages/Experience";
 import Header from "../components/Header";
+import Resume from "../pages/Resume";
 import { useTheme } from "../context/ThemeContext";
 
 export default function AppRoutes() {
@@ -12,8 +13,9 @@ export default function AppRoutes() {
   return (
     <BrowserRouter>
       <div
-        className={`min-h-screen transition-colors duration-500 ease-in-out ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
-          }`}
+        className={`min-h-screen transition-colors duration-500 ease-in-out ${
+          theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+        }`}
       >
         <Header />
         <Routes>
@@ -21,6 +23,7 @@ export default function AppRoutes() {
           <Route path="/about" element={<About />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/resume" element={<Resume />} />
         </Routes>
       </div>
     </BrowserRouter>
