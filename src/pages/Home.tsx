@@ -1,7 +1,6 @@
 import React from "react";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   const github = import.meta.env.VITE_APP_GITHUB;
